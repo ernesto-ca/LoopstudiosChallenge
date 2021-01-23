@@ -7,27 +7,45 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="css/styles.css">
+
   
   <title>Frontend Mentor | Loopstudios landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
+  <script type='text/javascript' src='js/scripts.js'></script>
+
   <nav>
     <img src="images/logo.svg" alt="logo"/>
-    <ul class="navbar">
+    <ul class="navbar" id="#navbar">
       <li><a href="#">About</a></li>
       <li><a href="#">Careers</a></li>
       <li><a href="#">Events</a></li>
       <li><a href="#">Products</a></li>
       <li><a href="#">Support</a></li>
     </ul>
+    <a id="menuBtn" href="javascript:void(0)" onclick="openNav()"><img src="images/icon-hamburger.svg" alt="menu"/></a> 
   </nav>
+
+  <!-- The overlay -->
+  <div id="menu" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+      <img class = "nav-logo" src="images/logo.svg" alt="logo"/>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icon-close.svg" alt="menu"/></a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Events</a>
+      <a href="#">Products</a>
+      <a href="#">Support</a>
+    </div>
+
+  </div>
+   <!-- The overlay -->
 
   <header>
     <h1>
@@ -38,6 +56,7 @@
   </header>
  
   <section class="section-history">
+    <img src="images/desktop/image-interactive.jpg" alt="interactive">
     <article>
       <h2>The leader in interactive VR</h2>
       <p>
@@ -54,46 +73,55 @@
   </div>
 
   <section class="section-creations">
-      <div class="creation">
-        <img src="images/desktop/image-deep-earth.jpg" alt="creation1"/>
+      <div class="creation" id="creation1">
+        <img src="images/desktop/image-deep-earth.jpg" alt="Deep earth"/>
         <h3>Deep earth</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-night-arcade.jpg" alt="creation2"/>
+      <div class="creation" id="creation2">
+        <img src="images/desktop/image-night-arcade.jpg" alt="Night arcade" />
         <h3>Night arcade</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-soccer-team.jpg" alt="creation3"/>
+      <div class="creation" id="creation3">
+        <img src="images/desktop/image-soccer-team.jpg" alt="Soccer team VR" />
         <h3>Soccer team VR</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-grid.jpg" alt="creation4"/>
+      <div class="creation" id="creation4">
+        <img src="images/desktop/image-grid.jpg" alt="The grid" />
         <h3>The grid</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-from-above.jpg" alt="creation5"/>
+      <div class="creation"  id="creation5">
+        <img src="images/desktop/image-from-above.jpg" alt="From up above VR"/>
         <h3>From up above VR</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-pocket-borealis.jpg" alt="creation6"/>
+      <div class="creation" id="creation6">
+        <img src="images/desktop/image-pocket-borealis.jpg" alt="Pocket borealis" />
         <h3>Pocket borealis</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-curiosity.jpg" alt="creation7"/>
+      <div class="creation" id="creation7">
+        <img src="images/desktop/image-curiosity.jpg" alt="The curiosity" />
         <h3>The curiosity</h3>
       </div>
-      <div class="creation">
-        <img src="images/desktop/image-fisheye.jpg" alt="creation8"/>
+      <div class="creation" id="creation8">
+        <img src="images/desktop/image-fisheye.jpg" alt="Make it fisheye" />
         <h3>Make it fisheye</h3>
-      </div>    
+      </div>
+      <a href="#" class="btn-see-bottom">See all</a>    
   </section>
   
 
  
 <footer>
 
-  <div class="foot-logoNsocial">
-    <img src="images/logo.svg" alt="logo"/>
+ 
+    <img class="logo-foot" src="images/logo.svg" alt="logo"/>
+
+    <ul class="nav-footer">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
 
     <div class="icons">
       <a href="#"><img class="social" src="images/icon-facebook.svg" alt="faceboock"></a>
@@ -102,23 +130,13 @@
       <a href="#"><img class="social" src="images/icon-instagram.svg" alt="instagram"></a>
     </div>
     
-  </div>
-  <div class="navNcopy">
-    <ul class="nav-footer">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Support</a></li>
-    </ul>
     <h5>
       © 2021 Loopstudios. All rights reserved.
     </h5>
-  </div>
+
  
 </footer>
- 
-
+  
   
 
   <div class="attribution">
