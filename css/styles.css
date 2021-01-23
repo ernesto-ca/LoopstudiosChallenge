@@ -41,20 +41,18 @@ nav {
     font-size: small;
     font-weight: 400;
     list-style-type: none;
-    color: white;
     margin-right: 12%;
 }
 
 .navbar li {
     display: inline;
     float: left;
+    margin-left: 2rem;
 }
 
 .navbar li a {
-    display: block;
     color: white;
     text-align: center;
-    margin-left: 2rem;
     text-decoration: none;
     transition: all 0.5s ease-in-out;
     border: 0px solid transparent;
@@ -96,10 +94,11 @@ h1 {
 
 /* Section History Start*/
 .section-history {
-    padding: 9rem;
+    margin: 9rem;
     background-image: url('../images/desktop/image-interactive.jpg');
     background-repeat: no-repeat;
-    background-position: center left 9rem;
+    background-position: center left 2rem;
+
     display: flex;
     justify-content: flex-end;
 }
@@ -110,7 +109,6 @@ article {
     padding-bottom: 0;
     background-color: white;
     margin-top: 12rem;
-    margin-right: 2rem;
 }
 
 h2 {
@@ -131,33 +129,24 @@ p {
 }
 /* Section History End*/
 
-/* Section Creations Start*/
-.section-creations {
-    padding-left: 9rem;
-    padding-right: 9rem;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-areas:
-        'header  header header header'
-        'content content content2 content2'
-        'content content content2 content2';
-}
+/* Title Creations Start*/
 
-.creations {
-    display: flex;
-    flex-direction: row;
+.title-creations {
+    width: 80%;
+    max-width: calc(100% - 20px);
+    display: inline-flex;
     justify-content: space-between;
-    grid-area: header;
+    margin-left: 10rem;
     margin-bottom: 3rem;
 }
 
 .btn-see {
     width: 10%;
     height: 20%;
+    margin-right: 6rem;
     letter-spacing: 4px;
     font-family: var(--font-family-alata);
     font-weight: 400;
-    font-size: smaller;
     color: black;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -178,26 +167,110 @@ p {
 .btn-see:active {
     background-color: rgba(0, 0, 0, 0.404);
 }
+/* Title Creations End*/
 
-.image {
-    width: 16rem;
-    height: 450px;
-}
-
-.sideL {
-    grid-area: content;
+/* Section Creations Start*/
+.section-creations {
+    margin-left: 10rem;
+    margin-bottom: 8rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.creation1 {
-    background-image: url('../images/desktop/image-deep-earth.jpg');
+.creation {
+    width: 16rem;
+    height: 450px;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 0, 0, 0),
+        rgba(0, 0, 0, 0.6)
+    );
+    background-size: 16rem 450px;
+    background-blend-mode: color;
+
+    transition: box-shadow 0.5s ease-in-out;
 }
 
-.creation2 {
-    background-image: url('../images/desktop/image-night-arcade.jpg');
+.creation:hover {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.creation img {
+    position: absolute;
+    z-index: -1;
+}
+
+h3 {
+    margin: 2rem;
+    font-family: var(--font-family-josefin);
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: white;
+    z-index: 999;
 }
 
 /* Section Creations End*/
+
+/* Footer Starts*/
+footer {
+    background-color: black;
+    padding: 2rem;
+    padding-left: 10rem;
+    padding-right: 15rem;
+}
+
+.foot-logoNsocial {
+    margin-bottom: 1rem;
+}
+
+.navNcopy,
+.foot-logoNsocial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icons a {
+    margin-left: 1rem;
+}
+
+.nav-footer {
+    font-family: var(--font-family-alata);
+    font-size: small;
+    font-weight: 400;
+    list-style-type: none;
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.nav-footer li {
+    display: inline;
+    float: left;
+    margin-right: 2rem;
+}
+
+.nav-footer li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+h5 {
+    font-family: var(--font-family-alata);
+    font-weight: 300;
+    line-height: 180%;
+    color: var(--color-very-dark-gray);
+}
+/* Footer End*/
