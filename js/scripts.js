@@ -1,3 +1,4 @@
+
 /* Open */
 function openNav() {
     document.getElementById("menu").style.height = "100%";
@@ -7,3 +8,4 @@ function openNav() {
 function closeNav() {
     document.getElementById("menu").style.height = "0%";
 } 
+
